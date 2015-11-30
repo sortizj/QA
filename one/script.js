@@ -1,9 +1,20 @@
-var cat = document.getElementById('click');
-var counts = document.getElementById('counts');
+var box = document.getElementById('box');
+var container = document.getElementById('container');
+var count = document.getElementById('count');
+var image = document.getElementById('img')
+
+var array = box.getElementsByTagName('img');
+var counters = [0,0,0,0,0];
 
 
-var cat2 = document.getElementById('click2');
-var counts2 = document.getElementById('counts2');
+function ejecutar(e){
 
-var array = [5];
+	for(i=0;i<array.length;i++){
 
+		if(e.getAttribute("id")==array[i].getAttribute("id")){
+			counters[i]++;
+			image.src = e.src;
+			count.innerHTML= counters[i];
+		}
+	}	
+}
