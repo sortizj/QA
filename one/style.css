@@ -1,6 +1,4 @@
-*{
-	transition:0.4s;
-}
+*{transition:0.4s;}
 .box{
 	float: left;
 	margin: 2%;
