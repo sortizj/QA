@@ -1,6 +1,19 @@
+*{
+	transition:0.4s;
+}
 .box{
 	float: left;
 	margin: 2%;
+}
+.box img{
+	width: 20%;
+	margin: 2%;
+	height: 200px;
+}
+.box img:hover{
+	width: 25%;
+	height: 250px;
+	margin: 0%;
 }
 p{
 
