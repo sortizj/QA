@@ -12,13 +12,16 @@
 }
 img{
 	width: 20%;
-	margin-left: 10%;
+}
+img, p{
+	margin-left: 40%;
 }
 .box img:hover{
 	width: 20%;
 	height: 250px;
 	margin: 0%;
 }
-p{
-
+.container p{
+	float: left;
+	margin-left: 0;
 }
