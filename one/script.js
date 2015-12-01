@@ -27,10 +27,7 @@ jQuery.getJSON('data.json', function(json, textStatus) {
 		array[i].id  = i;
 		array[i].setAttribute('onclick', "ejecutar(this)");
 	}
-	
 });
-
-console.log(array);
 
 function ejecutar(e){
 
