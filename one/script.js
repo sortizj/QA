@@ -5,7 +5,7 @@ var image = document.getElementById('img')
 var namescat = document.getElementById('namescat');
 
 
-var counters = [0,0,0,0,0];
+var counters = [];
 
 var items = [];
 var array = [];
@@ -17,6 +17,7 @@ jQuery.getJSON('data.json', function(json, textStatus) {
 	
 	for(var i=0;i<json.cats[0].length;i++){
  		$(".box").append('<img>');
+ 		counters.push(0);
 	}
 	array = box.getElementsByTagName('img');
 	console.log(array);
