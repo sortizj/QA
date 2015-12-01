@@ -19,7 +19,10 @@ jQuery.getJSON('data.json', function(json, textStatus) {
 	});
 	for(var i=0;i<json.cats[0].length;i++){
 		console.log(i);
+
+		array[i].alt = json.cats[0][i];
 		array[i].src = json.cats[1][i];
+
 		//items[i]= "<li> <a href='"+json.cats[1][i]+"'>"+json.cats[0][i]+"</a></li>";
 	}
 });
@@ -32,7 +35,7 @@ function ejecutar(e){
 			counters[i]++;
 			image.src = e.src;
 			count.innerHTML= counters[i];
-			namescat.innerText = names[i];
+			namescat.innerText = array[i].alt;
 		}
 	}	
 }
