@@ -6,7 +6,6 @@ var namescat = document.getElementById('namescat');
 
 var array = box.getElementsByTagName('img');
 var counters = [0,0,0,0,0];
-var names = ["cat1","cat2","cat3","cat4", "cat5"];
 
 var items = [];
 
@@ -19,11 +18,9 @@ jQuery.getJSON('data.json', function(json, textStatus) {
 	});
 	for(var i=0;i<json.cats[0].length;i++){
 		console.log(i);
-
+ 		$("body").append('<img>');
 		array[i].alt = json.cats[0][i];
 		array[i].src = json.cats[1][i];
-
-		//items[i]= "<li> <a href='"+json.cats[1][i]+"'>"+json.cats[0][i]+"</a></li>";
 	}
 });
 
