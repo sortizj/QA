@@ -4,25 +4,32 @@ var count = document.getElementById('count');
 var image = document.getElementById('img')
 var namescat = document.getElementById('namescat');
 
-var array = box.getElementsByTagName('img');
+
 var counters = [0,0,0,0,0];
 
 var items = [];
+var array = [];
 
 jQuery.getJSON('data.json', function(json, textStatus) {
 	$.each(json,function(index, el) {
-		
-		console.log(index);
 		items.push(el);
-
 	});
+	
 	for(var i=0;i<json.cats[0].length;i++){
-		console.log(i);
- 		$("body").append('<img>');
+ 		$(".box").append('<img>');
+	}
+	array = box.getElementsByTagName('img');
+	console.log(array);
+	for(var i=0;i<array.length;i++){
 		array[i].alt = json.cats[0][i];
 		array[i].src = json.cats[1][i];
+		array[i].id  = i;
+		array[i].setAttribute('onclick', "ejecutar(this)");
 	}
+	
 });
+
+console.log(array);
 
 function ejecutar(e){
 
